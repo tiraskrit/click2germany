@@ -52,7 +52,7 @@ const ContactPage = () => {
                 <i className="fas fa-map-marker-alt"></i>
               </div>
               <h3>Visit Us</h3>
-              <p>GERMANY Consultancy</p>
+              <p>Click2Germany Consultancy</p>
               <p>J.P. Road, Thamel</p>
               <p>Kathmandu, Nepal</p>
             </div>
@@ -173,7 +173,7 @@ const ContactPage = () => {
                 
                 <div className="form-group form-checkbox">
                   <input type="checkbox" id="privacy" name="privacy" required />
-                  <label htmlFor="privacy">I agree to the processing of my personal data according to GERMANY's <a href="/privacy-policy">Privacy Policy</a> *</label>
+                  <label htmlFor="privacy">I agree to the processing of my personal data according to Click2Germany's <a href="/privacy-policy">Privacy Policy</a> *</label>
                 </div>
                 
                 <div className="form-submit">

@@ -19,7 +19,7 @@ const AboutPage = () => {
             <div className="section-header left-aligned">
               <h2>Our Story</h2>
             </div>
-            <p>GERMANY was founded in 2018 by a group of Nepali professionals who had experienced the challenges of navigating the German immigration system firsthand. Recognizing the lack of reliable guidance for Nepalis seeking opportunities in Germany, they established GERMANY to bridge this gap.</p>
+            <p>Click2Germany was founded in 2018 by a group of Nepali professionals who had experienced the challenges of navigating the German immigration system firsthand. Recognizing the lack of reliable guidance for Nepalis seeking opportunities in Germany, they established GERMANY to bridge this gap.</p>
             <p>What started as a small consultancy in Thamel, Kathmandu has now grown into a trusted name in German visa consultancy and language education. Over the years, we have helped more than 2,000 Nepalis successfully relocate to Germany for studies, work, vocational training, and cultural exchange programs.</p>
             <p>Our team now includes former German university students, language experts, visa specialists, and professionals with extensive experience in the German education and employment sectors.</p>
           </div>
@@ -193,7 +193,7 @@ const AboutPage = () => {
               <div className="timeline-year">2018</div>
               <div className="timeline-content">
                 <h3>Foundation</h3>
-                <p>GERMANY was established in Thamel, Kathmandu as a specialized German consultancy service.</p>
+                <p>Click2Germany was established in Thamel, Kathmandu as a specialized German consultancy service.</p>
               </div>
             </div>
             <div className="timeline-item">

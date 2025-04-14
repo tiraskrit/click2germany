@@ -176,7 +176,7 @@ const ApplyPage = () => {
             {selectedVisa === 'ausbildung' && (
               <div className="visa-info">
                 <h3>Ausbildung (Vocational Training) Visa Application</h3>
-                <p>Receive practical training in a recognized profession through Germany's dual vocational training system. This combines practical work with theoretical education.</p>
+                <p>Receive practical training in a recognized profession through Click2Germany's dual vocational training system. This combines practical work with theoretical education.</p>
                 
                 <div className="visa-requirements">
                   <h4>Requirements:</h4>
@@ -421,7 +421,7 @@ const ApplyPage = () => {
             
             <div className="form-group form-checkbox">
               <input type="checkbox" id="terms" name="terms" required />
-              <label htmlFor="terms">I agree to the processing of my personal data according to GERMANY's <a href="/privacy-policy">Privacy Policy</a> *</label>
+              <label htmlFor="terms">I agree to the processing of my personal data according to Click2Germany's <a href="/privacy-policy">Privacy Policy</a> *</label>
             </div>
             
             <div className="form-submit">

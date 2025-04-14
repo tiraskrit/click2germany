@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="footer-logo-section">
           <Link to="/" className="footer-logo">
             <img src={logo} alt="Click2Germany Logo" />
-            <span>GERMANY</span>
+            <span>Click2Germany</span>
           </Link>
           <p>Your trusted partner for German visa consultancy and language learning services in Nepal.</p>
           <div className="social-icons">
@@ -57,7 +57,7 @@ const Footer = () => {
       </div>
       
       <div className="footer-bottom">
-        <p>&copy; {new Date().getFullYear()} GERMANY. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Click2Germany. All rights reserved.</p>
         <div className="footer-bottom-links">
           <Link to="/privacy-policy">Privacy Policy</Link>
           <Link to="/terms-conditions">Terms & Conditions</Link>

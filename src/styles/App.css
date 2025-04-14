@@ -335,7 +335,7 @@
   }
   
   .testimonial-image {
-    flex: 0 0 150px;
+    flex: 0 0 100px;
   }
   
   .testimonial-image img {
@@ -799,10 +799,55 @@
 
 .language-levels .level {
   background-color: var(--secondary-color);
-  color: var(--dark-color);
+  color: var (--dark-color);
   padding: var(--spacing-xs) var(--spacing-sm);
   border-radius: var(--border-radius);
   font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: var(--shadow-sm);
+}
+
+.language-levels .level:hover {
+  background-color: var(--accent-color);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+/* Language Level Tabs */
+.level-tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm); /* Add spacing between buttons */
+  margin: var(--spacing-md) 0;
+}
+
+.level-tab {
+  background-color: var(--light-gray);
+  color: var(--dark-color);
+  padding: var(--spacing-xs) var(--spacing-md);
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  transition: var(--transition);
+  border: 1px solid var(--light-gray);
+  box-shadow: var(--shadow-sm);
+}
+
+.level-tab:hover {
+  background-color: var(--secondary-color);
+  color: var(--white);
+  transform: translateY(-2px); /* Add a hover effect */
+}
+
+.level-tab.active {
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: 1px solid var(--primary-color);
+  box-shadow: var(--shadow-md);
 }
 
 /* Testimonials */
@@ -953,4 +998,39 @@
 .visa-form .form-submit {
   text-align: center;
   margin-top: var(--spacing-md);
+}
+
+/* Visa Type Buttons */
+.visa-tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+  margin: var(--spacing-md) 0;
+}
+
+.visa-tab {
+  background-color: var(--light-gray);
+  color: var(--dark-color);
+  padding: var(--spacing-xs) var(--spacing-md);
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  transition: var(--transition);
+  border: 1px solid var(--light-gray);
+  box-shadow: var(--shadow-sm);
+}
+
+.visa-tab:hover {
+  background-color: var(--secondary-color);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+.visa-tab.active {
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: 1px solid var(--primary-color);
+  box-shadow: var(--shadow-md);
 }

@@ -98,7 +98,7 @@ const LanguageCoursesPage = () => {
 
   return (
     <div className="language-courses-page">
-      <section className="page-header language-header">
+      {<section className="page-header language-header">
         <div className="page-header-content">
           <h1>German Language Courses</h1>
           <p>Learn German from certified instructors through our online classes</p>
@@ -106,10 +106,10 @@ const LanguageCoursesPage = () => {
         <div className="page-header-overlay"></div>
       </section>
 
-      <section className="language-intro">
+      /*<section className="language-intro">
         <div className="container">
           <div className="language-intro-content">
-            <h2>Why Learn German with GERMANY?</h2>
+            <h2>Why Learn German with Click2Germany?</h2>
             <p>Our online German language courses are designed to help you achieve fluency and confidence in German, preparing you for study, work, or life in Germany.</p>
             
             <div className="language-features">
@@ -155,7 +155,7 @@ const LanguageCoursesPage = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="course-levels">
         <div className="container">
@@ -211,7 +211,8 @@ const LanguageCoursesPage = () => {
             {filteredCourses.map(course => (
               <div className="course-card" key={course.id}>
                 <div className={`course-level course-level-${course.level}`}>
-                  {course.level.toUpperCase()}
+                    <br></br>
+                  {/* {course.level.toUpperCase()} */}
                 </div>
                 <div className="course-content">
                   <h3>{course.title}</h3>
