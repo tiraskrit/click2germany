@@ -24,7 +24,7 @@ const AboutPage = () => {
             <p>Our team now includes former German university students, language experts, visa specialists, and professionals with extensive experience in the German education and employment sectors.</p>
           </div>
           <div className="about-image">
-            <img src="/api/placeholder/500/400" alt="GERMANY Office" />
+            <img src="https://images.adsttc.com/media/images/649c/a208/5921/1809/2b26/96e1/medium_jpg/hawe-office-building-barkow-leibinger_6.jpg?1687986715" alt="GERMANY Office" />
           </div>
         </div>
       </section>
@@ -109,7 +109,7 @@ const AboutPage = () => {
           <div className="team-grid">
             <div className="team-member">
               <div className="member-image">
-                <img src="/api/placeholder/300/300" alt="Team Member" />
+                <img src="https://i.pinimg.com/474x/65/0e/83/650e839353173e1126198f6e6fd7432c.jpg" alt="Team Member" />
               </div>
               <h3>Anand Sharma</h3>
               <p className="member-title">Founder & CEO</p>

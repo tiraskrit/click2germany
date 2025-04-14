@@ -25,7 +25,7 @@ const HomePage = () => {
           <p>Expert guidance for study, work, and travel opportunities in Germany</p>
           <div className="hero-buttons">
             <Link to="/apply" className="btn btn-primary">Apply Now</Link>
-            <Link to="/services" className="btn btn-secondary">Explore Services</Link>
+            <Link to="/services" className="btn btn-secondary">Explore</Link>
           </div>
         </div>
         <div className="hero-overlay"></div>

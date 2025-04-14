@@ -1,0 +1,117 @@
+/* src/styles/Footer.css */
+.footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: var(--spacing-xl) 0 0;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+  }
+
+  .footer-logo-section {
+    flex: 1;
+    min-width: 250px;
+  }
+  
+  .footer-logo {
+    display: flex;
+    align-items: center;
+    color: var(--white);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-decoration: none;
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .footer-logo img {
+    height: 40px;
+    margin-right: 0.5rem;
+  }
+  
+  .footer-links {
+    flex: 2;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+  }
+  
+  .footer-link-section {
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .footer-link-section h3 {
+    font-size: 1.2rem;
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .footer-link-section ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    padding: 0;
+  }
+  
+  .footer-link-section ul li {
+    list-style: none;
+  }
+  
+  .footer-link-section ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+  }
+  
+  .footer-link-section ul li a:hover {
+    background-color: var(--secondary-color);
+    color: var(--dark-color);
+  }
+  
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+  }
+  
+  .contact-info li {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    padding: var(--spacing-md) 0;
+    background-color: var(--dark-color);
+    color: var(--gray-color);
+  }
+  
+  .footer-bottom p {
+    margin: 0;
+  }
+  
+  .footer-bottom-links {
+    margin-top: var(--spacing-xs);
+  }
+  
+  .footer-bottom-links a {
+    color: var(--gray-color);
+    text-decoration: none;
+    margin: 0 var(--spacing-xs);
+    font-size: 0.9rem;
+  }
+  
+  .footer-bottom-links a:hover {
+    color: var(--white);
+  }
