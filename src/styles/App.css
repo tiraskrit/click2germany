@@ -435,8 +435,9 @@
 }
 
 .service-icon img {
-  width: 60px;
-  height: 60px;
+  width: 200px;
+  height: 200px;
+  border-radius: 10%;
   margin-bottom: var(--spacing-sm);
 }
 
