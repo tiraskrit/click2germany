@@ -466,10 +466,16 @@
 .about-image .image-container {
   flex: 1;
   max-width: 600px;
+  margin-left: 5px;
 }
 
 .about-content {
   flex: 1;
+  margin-left: 5px;
+}
+
+.feature-icon {
+  color: green;
 }
 
 /* Language Promo */

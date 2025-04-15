@@ -164,7 +164,7 @@ const HomePage = () => {
                 <i className="fas fa-star"></i>
               </div>
               <p>"Click2Germany helped me secure admission to my dream university in Berlin. Their language courses and application guidance were invaluable."</p>
-              <h4>Sujata Sharma</h4>
+              <h4>Rohan Thapa</h4>
               <p className="client-status">Student at TU Berlin</p>
             </div>
           </div>
@@ -181,7 +181,7 @@ const HomePage = () => {
                 <i className="fas fa-star"></i>
               </div>
               <p>"The AU Pair program arranged by Click2Germany was life-changing. I improved my German skills and experienced the culture firsthand."</p>
-              <h4>Rohan Thapa</h4>
+              <h4>Sujata Sharma</h4>
               <p className="client-status">Former AU Pair in Munich</p>
             </div>
           </div>
