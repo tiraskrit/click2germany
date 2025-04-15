@@ -221,11 +221,11 @@ const LanguageCoursesPage = () => {
                   <div className="course-details">
                     <div className="detail">
                       <i className="fas fa-calendar-alt"></i>
-                      <span>Duration: {course.duration}</span>
+                      <span> Duration: {course.duration}</span>
                     </div>
                     <div className="detail">
                       <i className="fas fa-clock"></i>
-                      <span>Schedule:</span>
+                      <span> Schedule:</span>
                       <ul>
                         {course.schedule.map((schedule, index) => (
                           <li key={index}>{schedule.day}: {schedule.time}</li>
@@ -234,11 +234,11 @@ const LanguageCoursesPage = () => {
                     </div>
                     <div className="detail">
                       <i className="fas fa-money-bill-wave"></i>
-                      <span>Price: {course.price}</span>
+                      <span> Price: {course.price}</span>
                     </div>
                     <div className="detail">
                       <i className="fas fa-calendar-check"></i>
-                      <span>Upcoming Batches:</span>
+                      <span> Upcoming Batches:</span>
                       <ul>
                         {course.startDates.map((date, index) => (
                           <li key={index}>{date}</li>
@@ -258,6 +258,7 @@ const LanguageCoursesPage = () => {
       <section className="language-exam">
         <div className="container">
           <div className="exam-content">
+            <p></p>
             <h2>Official German Language Exams</h2>
             <p>We are an authorized test center for official German language examinations required for visa applications and university admissions.</p>
             
@@ -269,12 +270,14 @@ const LanguageCoursesPage = () => {
               </div>
               
               <div className="exam">
+                <p></p>
                 <h3>TestDaF</h3>
                 <p>Test of German as a Foreign Language, required for admission to German universities. Equivalent to B2-C1 levels.</p>
                 <button className="btn btn-secondary">More Info</button>
               </div>
               
               <div className="exam">
+                <p></p>
                 <h3>telc Deutsch</h3>
                 <p>The European Language Certificates in German, recognized for academic and professional purposes in German-speaking countries.</p>
                 <button className="btn btn-secondary">More Info</button>
@@ -286,6 +289,7 @@ const LanguageCoursesPage = () => {
 
       <section className="language-faq">
         <div className="container">
+          <p></p>
           <h2>Frequently Asked Questions</h2>
           
           <div className="faq-accordion">

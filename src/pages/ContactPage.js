@@ -79,15 +79,15 @@ const ContactPage = () => {
             
             <div className="contact-card">
               <div className="contact-icon">
-                <i className="fas fa-comments"></i>
+                <i className="fas fa-bell"></i>
               </div>
               <h3>Follow Us</h3>
               <div className="social-links">
-                <a href="#"><i className="fab fa-facebook-f"></i></a>
-                <a href="#"><i className="fab fa-instagram"></i></a>
-                <a href="#"><i className="fab fa-twitter"></i></a>
-                <a href="#"><i className="fab fa-linkedin-in"></i></a>
-                <a href="#"><i className="fab fa-youtube"></i></a>
+                <a href="https://facebook.com"><i className="fab fa-facebook-f"></i></a>
+                <a href="https://instagram.com"><i className="fab fa-instagram"></i></a>
+                <a href="https://twitter.com"><i className="fab fa-twitter"></i></a>
+                <a href="https://linkedin.com"><i className="fab fa-linkedin-in"></i></a>
+                <a href="https://youtube.com"><i className="fab fa-youtube"></i></a>
               </div>
             </div>
           </div>
@@ -98,6 +98,9 @@ const ContactPage = () => {
         <div className="container">
           <div className="contact-layout">
             <div className="contact-form-container">
+              <div className="contact-icon">
+                <i className="fas fa-comments"></i>
+              </div>
               <h2>Send Us a Message</h2>
               <p>Fill out the form below and our team will get back to you within 24 hours</p>
               
@@ -183,10 +186,11 @@ const ContactPage = () => {
             </div>
             
             <div className="map-container">
+              <p></p>
               <h2>Find Us</h2>
               <div className="map">
                 {/* Map placeholder - would be replaced with actual Google Maps iframe */}
-                <img src="/api/placeholder/600/450" alt="Map Location" />
+                <img src="https://www.edrawsoft.com/templates/images/location-map.png" alt="Map Location" />
               </div>
               <div className="office-hours">
                 <h3>Office Hours</h3>
@@ -257,7 +261,9 @@ const ContactPage = () => {
             
             <form className="newsletter-form">
               <input type="email" placeholder="Your Email Address" required />
+              <p></p>
               <button type="submit" className="btn btn-primary">Subscribe</button>
+              <p></p>
             </form>
           </div>
         </div>
