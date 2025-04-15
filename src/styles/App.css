@@ -478,6 +478,16 @@
   color: green;
 }
 
+.team-member{
+  margin-top: var(--spacing-md);
+}
+
+.team-member img {
+  width: 200px;
+  height: auto;
+  border-radius: var(--border-radius);
+}
+
 /* Language Promo */
 .language-promo {
   background-color: var(--primary-color);

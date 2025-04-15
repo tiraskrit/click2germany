@@ -19,7 +19,7 @@ const AboutPage = () => {
             <div className="section-header left-aligned">
               <h2>Our Story</h2>
             </div>
-            <p>Click2Germany was founded in 2018 by a group of Nepali professionals who had experienced the challenges of navigating the German immigration system firsthand. Recognizing the lack of reliable guidance for Nepalis seeking opportunities in Germany, they established GERMANY to bridge this gap.</p>
+            <p><b><i>Click2Germany</i></b> was founded in 2018 by a group of Nepali professionals who had experienced the challenges of navigating the German immigration system firsthand. Recognizing the lack of reliable guidance for Nepalis seeking opportunities in Germany, they established <b><i>Click2Germany</i></b> to bridge this gap.</p>
             <p>What started as a small consultancy in Thamel, Kathmandu has now grown into a trusted name in German visa consultancy and language education. Over the years, we have helped more than 2,000 Nepalis successfully relocate to Germany for studies, work, vocational training, and cultural exchange programs.</p>
             <p>Our team now includes former German university students, language experts, visa specialists, and professionals with extensive experience in the German education and employment sectors.</p>
           </div>
@@ -111,73 +111,49 @@ const AboutPage = () => {
               <div className="member-image">
                 <img src="https://i.pinimg.com/474x/65/0e/83/650e839353173e1126198f6e6fd7432c.jpg" alt="Team Member" />
               </div>
-              <h3>Anand Sharma</h3>
-              <p className="member-title">Founder & CEO</p>
+              <h3>Anand Sharma <a href="https://linkedin.com"><i className="fab fa-linkedin"></i></a> <a href="https://twitter.com"><i className="fab fa-twitter"></i></a></h3>
+              <p className="member-title"><b>Founder & CEO</b></p>
               <p>Former International Student in Berlin with 10+ years experience in education consultancy</p>
-              <div className="social-links">
-                <a href="#"><i className="fab fa-linkedin"></i></a>
-                <a href="#"><i className="fab fa-twitter"></i></a>
-              </div>
             </div>
             <div className="team-member">
               <div className="member-image">
-                <img src="/api/placeholder/300/300" alt="Team Member" />
+                <img src="https://st3.depositphotos.com/2000559/15054/i/450/depositphotos_150549284-stock-photo-pretty-female-teen.jpg" alt="" />
               </div>
-              <h3>Sunita Poudel</h3>
-              <p className="member-title">Language Program Director</p>
+              <h3>Sunita Poudel <a href="https://linkedin.com"><i className="fab fa-linkedin"></i></a> <a href="https://twitter.com"><i className="fab fa-twitter"></i></a></h3>
+              <p className="member-title"><b>Language Program Director</b></p>
               <p>Certified German Language Teacher with C2 proficiency and 8+ years teaching experience</p>
-              <div className="social-links">
-                <a href="#"><i className="fab fa-linkedin"></i></a>
-                <a href="#"><i className="fab fa-twitter"></i></a>
-              </div>
             </div>
             <div className="team-member">
               <div className="member-image">
-                <img src="/api/placeholder/300/300" alt="Team Member" />
+                <img src="https://www.rbb24.de/content/dam/rbb/rbb/rbb24/2021/2020_02/imago-images/mm.jpg.jpg/size=708x398.jpg" alt="" />
               </div>
-              <h3>Michael Müller</h3>
-              <p className="member-title">German University Relations</p>
+              <h3>Michael Müller <a href="https://linkedin.com"><i className="fab fa-linkedin"></i></a> <a href="https://twitter.com"><i className="fab fa-twitter"></i></a></h3>
+              <p className="member-title"><b>German University Relations</b></p>
               <p>Native German speaker with extensive connections to German universities and educational institutions</p>
-              <div className="social-links">
-                <a href="#"><i className="fab fa-linkedin"></i></a>
-                <a href="#"><i className="fab fa-twitter"></i></a>
-              </div>
             </div>
             <div className="team-member">
               <div className="member-image">
-                <img src="/api/placeholder/300/300" alt="Team Member" />
+                <img src="https://files.photosnepal.com/preview/2022/12/professional-nepali-businesswoman-posing-with-laptop-over-black-background-wbr9whexv.jpg?size=large" alt="Team Member" />
               </div>
-              <h3>Binita Gurung</h3>
-              <p className="member-title">Visa & Immigration Specialist</p>
+              <h3>Binita Gurung <a href="https://linkedin.com"><i className="fab fa-linkedin"></i></a> <a href="https://twitter.com"><i className="fab fa-twitter"></i></a></h3>
+              <p className="member-title"><b>Visa & Immigration Specialist</b></p>
               <p>Former visa officer with 6+ years experience in German immigration procedures</p>
-              <div className="social-links">
-                <a href="#"><i className="fab fa-linkedin"></i></a>
-                <a href="#"><i className="fab fa-twitter"></i></a>
-              </div>
             </div>
             <div className="team-member">
               <div className="member-image">
-                <img src="/api/placeholder/300/300" alt="Team Member" />
+                <img src="https://i0.wp.com/neostuffs.com/wp-content/uploads/2016/02/dayahang.jpg?fit=708%2C708&ssl=1" alt="" />
               </div>
-              <h3>Prakash Thapa</h3>
-              <p className="member-title">Career Counselor</p>
+              <h3>Prakash Thapa <a href="https://linkedin.com"><i className="fab fa-linkedin"></i></a> <a href="https://twitter.com"><i className="fab fa-twitter"></i></a></h3>
+              <p className="member-title"><b>Career Counselor</b></p>
               <p>Specializes in Ausbildung and work placement opportunities with German companies</p>
-              <div className="social-links">
-                <a href="#"><i className="fab fa-linkedin"></i></a>
-                <a href="#"><i className="fab fa-twitter"></i></a>
-              </div>
             </div>
             <div className="team-member">
               <div className="member-image">
-                <img src="/api/placeholder/300/300" alt="Team Member" />
+                <img src="https://english.onlinekhabar.com/wp-content/uploads/2021/03/Anushka.jpg" alt="Team Member" />
               </div>
-              <h3>Lisa Schmidt</h3>
-              <p className="member-title">AU Pair Program Coordinator</p>
+              <h3>Lisa Schmidt <a href="https://linkedin.com"><i className="fab fa-linkedin"></i></a> <a href="https://twitter.com"><i className="fab fa-twitter"></i></a></h3>
+              <p className="member-title"><b>AU Pair Program Coordinator</b></p>
               <p>Former AU Pair with extensive experience in matching candidates with host families</p>
-              <div className="social-links">
-                <a href="#"><i className="fab fa-linkedin"></i></a>
-                <a href="#"><i className="fab fa-twitter"></i></a>
-              </div>
             </div>
           </div>
         </div>
