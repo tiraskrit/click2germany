@@ -13,8 +13,6 @@ const LanguageCoursesPage = () => {
   
   // Fetch courses from backend
 
-  console.log('API URL:', API_URL);
-
   useEffect(() => {
   const fetchCourses = async () => {
     try {
