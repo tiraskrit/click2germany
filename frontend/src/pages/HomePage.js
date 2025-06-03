@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 // import '../styles/HomePage.css';
-// import heroImage from '../assets/hero-image.jpg';
 import servicesIcon1 from '../assets/icons/student-visa.png';
 import servicesIcon2 from '../assets/icons/au-pair.png';
 import servicesIcon3 from '../assets/icons/work-visa.png';
@@ -19,7 +18,7 @@ const HomePage = () => {
   return (
     <div className="home-page">
       {/* Hero Section */}
-      <section className="hero-section" style={{ backgroundImage: `url(${'heroImage'})` }}>
+      <section className="hero-section">
         <div className="hero-content">
           <h1>Your Journey to Germany Starts Here</h1>
           <p>Expert guidance for study, work, and travel opportunities in Germany</p>
