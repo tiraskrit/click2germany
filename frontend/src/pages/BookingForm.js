@@ -13,7 +13,7 @@ const BookingForm = ({ course, isOpen, onClose }) => {
   });
   
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [paymentApproved, setPaymentApproved] = useState(false);
+  // const [paymentApproved, setPaymentApproved] = useState(false);
   const [bookingConfirmed, setBookingConfirmed] = useState(false);
 
   const handleInputChange = (e) => {
@@ -69,7 +69,7 @@ const BookingForm = ({ course, isOpen, onClose }) => {
       const captureData = await captureResponse.json();
       
       if (captureData.status === 'COMPLETED') {
-        setPaymentApproved(true);
+        // setPaymentApproved(true);
         
         // Create booking in database
         const bookingResponse = await fetch('/api/bookings', {
