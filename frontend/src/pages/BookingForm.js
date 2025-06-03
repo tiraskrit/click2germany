@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { PayPalScriptProvider, PayPalButtons } from '@paypal/react-paypal-js';
 import '../styles/BookingForm.css';
+import { API_URL } from '../api';
 
 const BookingForm = ({ course, isOpen, onClose }) => {
   const [formData, setFormData] = useState({
@@ -31,7 +32,7 @@ const BookingForm = ({ course, isOpen, onClose }) => {
 
   const createPayPalOrder = async () => {
     try {
-      const response = await fetch('/api/create-paypal-order', {
+      const response = await fetch(`${API_URL}/api/create-paypal-order`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -56,7 +57,7 @@ const BookingForm = ({ course, isOpen, onClose }) => {
       setIsSubmitting(true);
       
       // Capture the payment
-      const captureResponse = await fetch('/api/capture-paypal-order', {
+      const captureResponse = await fetch(`${API_URL}/api/capture-paypal-order`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -72,7 +73,7 @@ const BookingForm = ({ course, isOpen, onClose }) => {
         // setPaymentApproved(true);
         
         // Create booking in database
-        const bookingResponse = await fetch('/api/bookings', {
+        const bookingResponse = await fetch(`${API_URL}/api/bookings`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

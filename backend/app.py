@@ -20,7 +20,7 @@ CORS(app)  # Enable CORS for all routes
 
 # MongoDB configuration
 MONGODB_URI = os.getenv('MONGODB_URI')
-DATABASE_NAME = 'click2de'
+DATABASE_NAME = os.getenv('DATABASE_NAME')
 
 # Initialize MongoDB
 try:

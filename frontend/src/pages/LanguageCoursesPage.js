@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import BookingForm from './BookingForm';
+import { API_URL } from '../api';
 
 const LanguageCoursesPage = () => {
   const [selectedLevel, setSelectedLevel] = useState('all');
@@ -12,11 +13,13 @@ const LanguageCoursesPage = () => {
   
   // Fetch courses from backend
 
+  console.log('API URL:', API_URL);
+
   useEffect(() => {
   const fetchCourses = async () => {
     try {
       setLoading(true);
-      const response = await fetch(`/api/courses?level=${selectedLevel}`);
+      const response = await fetch(`${API_URL}/api/courses?level=${selectedLevel}`);
       
       if (!response.ok) {
         throw new Error('Failed to fetch courses');
