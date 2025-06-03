@@ -1,161 +1,95 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-// import '../styles/LanguageCoursesPage.css';
+import BookingForm from './BookingForm';
 
 const LanguageCoursesPage = () => {
   const [selectedLevel, setSelectedLevel] = useState('all');
+  const [courses, setCourses] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const [selectedCourse, setSelectedCourse] = useState(null);
+  const [showBookingForm, setShowBookingForm] = useState(false);
   
+  // Fetch courses from backend
+
+  useEffect(() => {
+  const fetchCourses = async () => {
+    try {
+      setLoading(true);
+      const response = await fetch(`/api/courses?level=${selectedLevel}`);
+      
+      if (!response.ok) {
+        throw new Error('Failed to fetch courses');
+      }
+      
+      const data = await response.json();
+      setCourses(data);
+    } catch (err) {
+      setError('Failed to load courses. Please try again later.');
+      console.error('Error fetching courses:', err);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  fetchCourses();
+  }, [selectedLevel]);
+
+    // Retry function for the "Try Again" button
+  const retryFetchCourses = () => {
+    setError(null); // Clear the error before retrying
+    // Re-trigger useEffect by changing a dummy state
+    setSelectedLevel(prev => prev); // Forces re-fetch
+  };
+
   const handleLevelChange = (level) => {
     setSelectedLevel(level);
   };
 
-  const courses = [
-    {
-      id: 1,
-      level: 'a1',
-      title: 'A1 - Beginner German',
-      description: 'Start your German language journey with our comprehensive beginner course. Learn basic vocabulary, grammar, and simple conversations.',
-      duration: '8 weeks',
-      schedule: [
-        { day: 'Monday & Wednesday', time: '6:00 PM - 7:30 PM' },
-        { day: 'Tuesday & Thursday', time: '10:00 AM - 11:30 AM' },
-        { day: 'Saturday & Sunday', time: '9:00 AM - 12:00 PM (Weekend Intensive)' }
-      ],
-      price: 'NPR 12,000',
-      startDates: ['May 15, 2025', 'June 10, 2025', 'July 5, 2025']
-    },
-    {
-      id: 2,
-      level: 'a2',
-      title: 'A2 - Elementary German',
-      description: 'Build on your basic knowledge with our A2 course. Expand your vocabulary and learn to communicate in everyday situations with more confidence.',
-      duration: '10 weeks',
-      schedule: [
-        { day: 'Monday & Wednesday', time: '7:45 PM - 9:15 PM' },
-        { day: 'Tuesday & Thursday', time: '1:00 PM - 2:30 PM' },
-        { day: 'Saturday & Sunday', time: '1:00 PM - 4:00 PM (Weekend Intensive)' }
-      ],
-      price: 'NPR 15,000',
-      startDates: ['May 15, 2025', 'June 10, 2025', 'July 5, 2025']
-    },
-    {
-      id: 3,
-      level: 'b1',
-      title: 'B1 - Intermediate German',
-      description: 'Advance your German skills with our B1 course. Focus on more complex grammar, expanding vocabulary, and improving conversation skills for daily life.',
-      duration: '12 weeks',
-      schedule: [
-        { day: 'Monday & Wednesday', time: '6:00 PM - 7:30 PM' },
-        { day: 'Tuesday & Thursday', time: '6:00 PM - 7:30 PM' },
-        { day: 'Saturday & Sunday', time: '9:00 AM - 12:00 PM (Weekend Intensive)' }
-      ],
-      price: 'NPR 18,000',
-      startDates: ['May 22, 2025', 'June 17, 2025', 'July 12, 2025']
-    },
-    {
-      id: 4,
-      level: 'b2',
-      title: 'B2 - Upper Intermediate German',
-      description: 'Refine your German language skills with our B2 course. Develop fluency in various contexts and prepare for academic or professional environments.',
-      duration: '12 weeks',
-      schedule: [
-        { day: 'Monday & Wednesday', time: '7:45 PM - 9:15 PM' },
-        { day: 'Tuesday & Thursday', time: '7:45 PM - 9:15 PM' },
-        { day: 'Saturday & Sunday', time: '1:00 PM - 4:00 PM (Weekend Intensive)' }
-      ],
-      price: 'NPR 20,000',
-      startDates: ['May 22, 2025', 'June 17, 2025', 'July 12, 2025']
-    },
-    {
-      id: 5,
-      level: 'c1',
-      title: 'C1 - Advanced German',
-      description: 'Master complex aspects of German with our C1 course. Achieve near-native fluency and handle academic and professional communication with confidence.',
-      duration: '14 weeks',
-      schedule: [
-        { day: 'Monday & Wednesday', time: '6:00 PM - 8:00 PM' },
-        { day: 'Saturday & Sunday', time: '9:00 AM - 1:00 PM (Weekend Intensive)' }
-      ],
-      price: 'NPR 25,000',
-      startDates: ['June 1, 2025', 'July 15, 2025', 'August 10, 2025']
-    },
-    {
-      id: 6,
-      level: 'c2',
-      title: 'C2 - Proficiency German',
-      description: 'Achieve the highest level of German language proficiency with our C2 course. Perfect your skills to communicate at a native-like level in all contexts.',
-      duration: '16 weeks',
-      schedule: [
-        { day: 'Tuesday & Thursday', time: '6:00 PM - 8:00 PM' },
-        { day: 'Saturday & Sunday', time: '2:00 PM - 6:00 PM (Weekend Intensive)' }
-      ],
-      price: 'NPR 30,000',
-      startDates: ['June 5, 2025', 'August 1, 2025', 'September 15, 2025']
-    }
-  ];
+  const handleBookNow = (course) => {
+    setSelectedCourse(course);
+    setShowBookingForm(true);
+  };
 
-  const filteredCourses = selectedLevel === 'all' ? courses : courses.filter(course => course.level === selectedLevel);
+  const handleCloseBookingForm = () => {
+    setShowBookingForm(false);
+    setSelectedCourse(null);
+  };
+
+  if (loading) {
+    return (
+      <div className="language-courses-page">
+        <div className="loading-container">
+          <i className="fas fa-spinner fa-spin"></i>
+          <p>Loading courses...</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="language-courses-page">
+        <div className="error-container">
+          <i className="fas fa-exclamation-triangle"></i>
+          <p>{error}</p>
+          <button className="btn btn-primary" onClick={retryFetchCourses}>
+            Try Again
+          </button>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="language-courses-page">
-      {<section className="page-header language-header">
+      <section className="page-header language-header">
         <div className="page-header-content">
           <h1>German Language Courses</h1>
           <p>Learn German from certified instructors through our online classes</p>
         </div>
         <div className="page-header-overlay"></div>
       </section>
-
-      /*<section className="language-intro">
-        <div className="container">
-          <div className="language-intro-content">
-            <h2>Why Learn German with Click2Germany?</h2>
-            <p>Our online German language courses are designed to help you achieve fluency and confidence in German, preparing you for study, work, or life in Germany.</p>
-            
-            <div className="language-features">
-              <div className="feature">
-                <div className="feature-icon">
-                  <i className="fas fa-user-graduate"></i>
-                </div>
-                <div className="feature-text">
-                  <h3>Certified Instructors</h3>
-                  <p>Learn from native German speakers and certified language teachers with years of experience.</p>
-                </div>
-              </div>
-              
-              <div className="feature">
-                <div className="feature-icon">
-                  <i className="fas fa-laptop"></i>
-                </div>
-                <div className="feature-text">
-                  <h3>Interactive Online Classes</h3>
-                  <p>Engage in interactive lessons with small class sizes to ensure personal attention and maximum speaking practice.</p>
-                </div>
-              </div>
-              
-              <div className="feature">
-                <div className="feature-icon">
-                  <i className="fas fa-book"></i>
-                </div>
-                <div className="feature-text">
-                  <h3>Comprehensive Learning Materials</h3>
-                  <p>Access to digital textbooks, audio materials, and additional resources to support your learning journey.</p>
-                </div>
-              </div>
-              
-              <div className="feature">
-                <div className="feature-icon">
-                  <i className="fas fa-certificate"></i>
-                </div>
-                <div className="feature-text">
-                  <h3>Certificate of Completion</h3>
-                  <p>Receive a certificate at the end of each level, recognized for visa applications and academic purposes.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
 
       <section className="course-levels">
         <div className="container">
@@ -208,11 +142,10 @@ const LanguageCoursesPage = () => {
           </div>
           
           <div className="course-grid">
-            {filteredCourses.map(course => (
+            {courses.map(course => (
               <div className="course-card" key={course.id}>
                 <div className={`course-level course-level-${course.level}`}>
-                    <br></br>
-                  {/* {course.level.toUpperCase()} */}
+                  <br></br>
                 </div>
                 <div className="course-content">
                   <h3>{course.title}</h3>
@@ -246,11 +179,73 @@ const LanguageCoursesPage = () => {
                       </ul>
                     </div>
                   </div>
-                  
-                  <button className="btn btn-primary">Book Now</button>
+                  <br></br>
+                  <button 
+                    className="btn btn-primary"
+                    onClick={() => handleBookNow(course)}
+                  >
+                    Book Now
+                  </button>
                 </div>
               </div>
             ))}
+          </div>
+          
+          {courses.length === 0 && !loading && (
+            <div className="no-courses-message">
+              <p>No courses available at the moment. Please check back later.</p>
+            </div>
+          )}
+        </div>
+      </section>
+
+      <section className="language-intro">
+        <div className="container">
+          <div className="language-intro-content">
+            <h2>Why Learn German with Click2Germany?</h2>
+            <p>Our online German language courses are designed to help you achieve fluency and confidence in German, preparing you for study, work, or life in Germany.</p>
+            
+            <div className="language-features">
+              <div className="feature">
+                <div className="feature-icon">
+                  <i className="fas fa-user-graduate"></i>
+                </div>
+                <div className="feature-text">
+                  <h3>Certified Instructors</h3>
+                  <p>Learn from native German speakers and certified language teachers with years of experience.</p>
+                </div>
+              </div>
+              
+              <div className="feature">
+                <div className="feature-icon">
+                  <i className="fas fa-laptop"></i>
+                </div>
+                <div className="feature-text">
+                  <h3>Interactive Online Classes</h3>
+                  <p>Engage in interactive lessons with small class sizes to ensure personal attention and maximum speaking practice.</p>
+                </div>
+              </div>
+              
+              <div className="feature">
+                <div className="feature-icon">
+                  <i className="fas fa-book"></i>
+                </div>
+                <div className="feature-text">
+                  <h3>Comprehensive Learning Materials</h3>
+                  <p>Access to digital textbooks, audio materials, and additional resources to support your learning journey.</p>
+                </div>
+              </div>
+              
+              <div className="feature">
+                <div className="feature-icon">
+                  <i className="fas fa-certificate"></i>
+                </div>
+                <div className="feature-text">
+                  <h3>Certificate of Completion</h3>
+                  <p>Receive a certificate at the end of each level, recognized for visa applications and academic purposes.</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -356,6 +351,15 @@ const LanguageCoursesPage = () => {
           </div>
         </div>
       </section>
+
+      {/* Booking Form Modal */}
+      {showBookingForm && selectedCourse && (
+        <BookingForm
+          course={selectedCourse}
+          isOpen={showBookingForm}
+          onClose={handleCloseBookingForm}
+        />
+      )}
     </div>
   );
 };

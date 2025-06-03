@@ -1,0 +1,343 @@
+
+.booking-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.booking-modal {
+  background: white;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: modalFadeIn 0.3s ease-out;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.booking-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 24px 16px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.booking-modal-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #6b7280;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.close-btn:hover {
+  background-color: #f3f4f6;
+  color: #374151;
+}
+
+.booking-modal-content {
+  padding: 24px;
+}
+
+.course-summary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+
+.course-summary h3 {
+  margin: 0 0 12px 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.course-summary p {
+  margin: 4px 0;
+  opacity: 0.9;
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group select {
+  padding: 12px 16px;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.2s;
+  background-color: white;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.form-group input::placeholder {
+  color: #9ca3af;
+}
+
+.payment-section {
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.payment-section h3 {
+  margin: 0 0 16px 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.price-display {
+  background: #f8fafc;
+  padding: 16px 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #e2e8f0;
+}
+
+.price-label {
+  font-weight: 600;
+  color: #374151;
+}
+
+.price-amount {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #059669;
+}
+
+.paypal-button-container {
+  margin: 20px 0;
+}
+
+.validation-message {
+  background: #fef3cd;
+  color: #92400e;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid #fbbf24;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.loading-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px;
+  background: #eff6ff;
+  color: #1e40af;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.loading-message i {
+  font-size: 1.2rem;
+}
+
+.booking-success {
+  text-align: center;
+  padding: 40px 24px;
+}
+
+.success-icon {
+  margin-bottom: 20px;
+}
+
+.success-icon i {
+  font-size: 4rem;
+  color: #10b981;
+}
+
+.booking-success h2 {
+  margin: 0 0 16px 0;
+  color: #1f2937;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.booking-success > p {
+  color: #6b7280;
+  margin-bottom: 32px;
+  font-size: 1.1rem;
+}
+
+.booking-details {
+  background: #f9fafb;
+  padding: 24px;
+  border-radius: 8px;
+  margin: 24px 0;
+  text-align: left;
+  border: 1px solid #e5e7eb;
+}
+
+.booking-details h3 {
+  margin: 0 0 16px 0;
+  color: #1f2937;
+  font-size: 1.2rem;
+}
+
+.booking-details p {
+  margin: 8px 0;
+  color: #374151;
+}
+
+.booking-details strong {
+  color: #1f2937;
+  font-weight: 600;
+}
+
+/* Loading and Error States */
+.loading-container,
+.error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.loading-container i {
+  font-size: 2rem;
+  color: #667eea;
+  margin-bottom: 16px;
+}
+
+.error-container i {
+  font-size: 2rem;
+  color: #ef4444;
+  margin-bottom: 16px;
+}
+
+.loading-container p,
+.error-container p {
+  font-size: 1.1rem;
+  color: #6b7280;
+  margin-bottom: 20px;
+}
+
+.no-courses-message {
+  text-align: center;
+  padding: 60px 20px;
+  color: #6b7280;
+  font-size: 1.1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .booking-modal-overlay {
+    padding: 10px;
+  }
+  
+  .booking-modal {
+    max-height: 95vh;
+  }
+  
+  .booking-modal-header,
+  .booking-modal-content {
+    padding: 16px;
+  }
+  
+  .course-summary {
+    padding: 16px;
+  }
+  
+  .booking-success {
+    padding: 24px 16px;
+  }
+  
+  .price-display {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+  
+  .form-group input,
+  .form-group select {
+    padding: 10px 12px;
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+}
+
+@media (max-width: 480px) {
+  .booking-modal-header h2 {
+    font-size: 1.2rem;
+  }
+  
+  .booking-success h2 {
+    font-size: 1.5rem;
+  }
+  
+  .success-icon i {
+    font-size: 3rem;
+  }
+}
+
+/* Custom scrollbar for modal */
+.booking-modal::-webkit-scrollbar {
+  width: 6px;
+}
+
+.booking-modal::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
