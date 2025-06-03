@@ -3,5 +3,5 @@ Flask-CORS
 pymongo
 paypalrestsdk
 python-dotenv
-bson
 paypal-checkout-serversdk
+gunicorn
